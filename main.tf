@@ -8,7 +8,7 @@ terraform {
 
   backend "azurerm" {
     resource_group_name  = "rg-githubtfstates"
-    storage_account_name = "miszelsandbox"
+    storage_account_name = "miszelsharedservices"
     container_name       = "tfstate"
     key                  = "terraform.tfstate"
     use_oidc             = true
@@ -22,7 +22,7 @@ provider "azurerm" {
   use_oidc = true
 }
 
-# resource "azurerm_resource_group" "rg-aks" {
-#   name     = var.resource_group_name
-#   location = var.location
-# }
+resource "azurerm_resource_group" "rg-aks" {
+  name     = var.resource_group_name
+  location = var.location
+}
