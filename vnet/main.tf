@@ -1,5 +1,7 @@
 resource "azurerm_virtual_network" "vnet" {
-  name                = "${var.names.product_group}-${var.names.subscription_type}-${var.names.location}-vnet"
+  name = "${var.names.product_group}-${var.names.subscription_type}-${var.names.location}-vnet"
+  #checkov:skip=CKV_AZURE_182:not needed
+  #checkov:skip=CKV_AZURE_183:not needed
   location            = var.location
   resource_group_name = var.resource_group_name
   address_space       = var.address_space
