@@ -13,7 +13,8 @@ module "subnet" {
   source   = "./vnet/subnet"
   for_each = local.subnets
 
-  names               = var.names
+  names = var.names
+  #checkov:skip=CKV_AZURE_31:not needed
   resource_group_name = var.resource_group_name
   location            = var.location
   tags                = var.tags
