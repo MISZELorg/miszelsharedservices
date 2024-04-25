@@ -12,10 +12,10 @@ resource "azurerm_subnet" "subnet" {
   address_prefixes     = var.subnet_prefixes
 }
 
-resource "azurerm_virtual_network_dns_servers" "vnet" {
-  virtual_network_id = azurerm_virtual_network.vnet.id
-  dns_servers        = [""]
-}
+# resource "azurerm_virtual_network_dns_servers" "vnet" {
+#   virtual_network_id = azurerm_virtual_network.vnet.id
+#   dns_servers        = [""]
+# }
 
 resource "azurerm_network_security_group" "nsg" {
   name                = var.nsg_name
