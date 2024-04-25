@@ -1,0 +1,3 @@
+module "resgroups" {
+  source = "./rg"
+}
