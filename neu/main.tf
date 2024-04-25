@@ -6,7 +6,7 @@ module "rg" {
 
 module "vnet" {
   source              = "./vnet"
-  resource_group_name = module.rg.resource_group_location
+  resource_group_name = module.rg.resource_group_name
   vnet_name           = "vnet-neu"
   address_space       = ["10.0.0.0/16"]
   subnet_name         = "default"
