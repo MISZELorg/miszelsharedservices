@@ -11,7 +11,7 @@ module "rbac" {
   role_definition_name = "Key Vault Administrator"
   principal_id         = var.spn_admin
   principal_type       = "ServicePrincipal"
-  scope                = module.runner-neu.resource_group_id
+  scope                = module.runner-neu.resource_group_name
   depends_on           = [module.runner-neu]
 }
 
@@ -20,7 +20,7 @@ module "rbac2" {
   role_definition_name = "Key Vault Administrator"
   principal_id         = var.spn_reader
   principal_type       = "ServicePrincipal"
-  scope                = module.runner-neu.resource_group_id
+  scope                = module.runner-neu.resource_group_name
   depends_on           = [module.runner-neu]
 }
 
@@ -29,7 +29,7 @@ module "rbac3" {
   role_definition_name = "Key Vault Crypto Service Encryption User"
   principal_id         = var.spn_admin
   principal_type       = "ServicePrincipal"
-  scope                = module.runner-neu.resource_group_id
+  scope                = module.runner-neu.resource_group_name
   depends_on           = [module.runner-neu]
 }
 
