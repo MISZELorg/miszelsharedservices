@@ -1,11 +1,11 @@
-module "resgroups" {
-  source = "./rg"
+module "resource_group_rg-runner-weu" {
+  source              = "./resource_group"
+  resource_group_name = var.resource_group_names["rg1"]
+  location            = "westeurope"
 }
 
-module "laws" {
-  source     = "./laws"
-  location   = module.resgroups.location
-  rg_name    = module.resgroups.name
-  logs_name  = "logs"
-  depends_on = [module.resgroups]
+module "resource_group_rg-runner-neu" {
+  source              = "./resource_group"
+  resource_group_name = var.resource_group_names["rg2"]
+  location            = "northeurope"
 }
