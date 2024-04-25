@@ -3,7 +3,7 @@ variable "resource_group_names" {
   type        = map(string)
 }
 
-variable "locations" {
-  description = "AZ resource locations"
-  type        = map(string)
+variable "location" {
+  description = "AZ resource location"
+  type        = string
 }
