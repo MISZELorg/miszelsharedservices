@@ -11,6 +11,6 @@ module "vnet" {
   address_space       = ["10.0.0.0/16"]
   subnet_name         = "default"
   subnet_prefixes     = ["10.0.0.0/24"]
-  nsg_name            = "nsg-weu"
+  nsg_name            = "nsg-neu"
   location            = module.rg.resource_group_location
 }
