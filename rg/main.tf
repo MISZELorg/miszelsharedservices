@@ -1,8 +1,8 @@
 resource "azurerm_resource_group" "rg" {
   for_each = {
-    rg1 = "westeurope"
-    rg2 = "northeurope"
+    runner-weu = "westeurope"
+    runner-neu = "northeurope"
   }
-  name     = each.key
+  name     = "rg-${each.key}"
   location = each.value
 }
