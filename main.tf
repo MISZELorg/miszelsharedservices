@@ -3,8 +3,9 @@ module "resgroups" {
 }
 
 module "laws" {
-  source    = "./laws"
-  location  = module.rg.location
-  rg_name   = module.rg.name
-  logs_name = "logs"
+  source     = "./laws"
+  location   = module.resgroups.location
+  rg_name    = module.resgroups.name
+  logs_name  = "logs"
+  depends_on = [module.resgroups]
 }
