@@ -1,7 +1,7 @@
-module "runner-neu" {
-  source = "./neu"
-}
+# module "runner-neu" {
+#   source = "./neu"
+# }
 
-module "runner-weu" {
-  source = "./weu"
-}
+# module "runner-weu" {
+#   source = "./weu"
+# }
